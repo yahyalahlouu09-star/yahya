@@ -67,10 +67,10 @@ img {
     position: fixed;
     inset: 0 0 auto 0;
     z-index: 1000;
-    padding: 20px 24px;
+    padding: 10px 15px;
     backdrop-filter: blur(18px);
     background: rgba(5, 9, 20, 0.84);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1rem solid rgba(255, 255, 255, 0.06);
 }
 
 .navbar {
