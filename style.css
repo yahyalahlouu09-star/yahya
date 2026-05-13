@@ -11,8 +11,8 @@ nav a {
   color: white;
 }
 
-.card {
-  background: white;
+.navbar {
+  background: #333;
   padding: 20px;
   margin: 15px;
   border-radius: 12px;
