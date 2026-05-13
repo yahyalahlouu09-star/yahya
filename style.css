@@ -638,12 +638,22 @@ img {
 
     .navbar {
         flex-direction: column;
-        gap: 20px;
+        gap: 16px;
+        align-items: center;
     }
 
     .nav-links {
-        width: auto;
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
         justify-content: center;
+        align-items: center;
+    }
+
+    .nav-links a {
+        width: min(100%, 280px);
+        text-align: center;
+        padding: 12px 16px;
     }
 
     .hero-title {
