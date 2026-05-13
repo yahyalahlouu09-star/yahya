@@ -6,27 +6,52 @@ body {
     line-height: 1.6;
 }
 
-nav a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: white;
-}
-
 .navbar {
-  background: #333;
-  padding: 20px;
-  margin: 15px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background: rgba(30, 41, 59, 0.7); /* Effet de transparence */
+    backdrop-filter: blur(10px); /* Effet de flou derrière la barre */
+    padding: 15px 30px;
+    margin: 20px;
+    border-radius: 50px; /* Bords très arrondis */
+    position: sticky;
+    top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-@media (max-width: 768px) {
-  nav {
-    display: flex;
-    flex-direction: column;
-  }
+.navbar a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s; /* Transition fluide */
+}
 
-  section {
-    padding: 20px;
-  }
+.navbar a:hover {
+    color: #38bdf8; /* Couleur bleu néon au survol */
+    text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+}
+a[href*="github.com"] {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #38bdf8, #818cf8); /* Dégradé */
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: transform 0.2s;
+}
+
+a[href*="github.com"]:hover {
+    transform: translateY(-3px); /* Petit saut au survol */
+    box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3);
+}
+h1, p {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
