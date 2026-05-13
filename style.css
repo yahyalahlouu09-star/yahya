@@ -70,7 +70,7 @@ img {
     padding: 10px 15px;
     backdrop-filter: blur(18px);
     background: rgba(5, 9, 20, 0.84);
-    border-bottom: 1rem solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .navbar {
@@ -654,6 +654,10 @@ img {
         width: min(100%, 280px);
         text-align: center;
         padding: 12px 16px;
+    }
+
+    main {
+        padding-top: 90px;
     }
 
     .hero-title {
