@@ -636,9 +636,14 @@ img {
         padding: 16px 18px;
     }
 
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
     .nav-links {
-        width: 100%;
-        justify-content: space-between;
+        width: auto;
+        justify-content: center;
     }
 
     .hero-title {
