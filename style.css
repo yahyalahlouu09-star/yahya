@@ -651,9 +651,21 @@ img {
     }
 
     .nav-links a {
-        width: min(100%, 280px);
+        width: min(100%, 240px);
         text-align: center;
-        padding: 12px 16px;
+        padding: 14px 20px;
+        background: rgba(124, 58, 237, 0.18);
+        border: 1px solid rgba(124, 58, 237, 0.35);
+        border-radius: 16px;
+        color: var(--text);
+        font-weight: 600;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+        background: rgba(124, 58, 237, 0.28);
+        border-color: rgba(124, 58, 237, 0.55);
+        transform: none;
     }
 
     main {
