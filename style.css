@@ -76,3 +76,9 @@ h1, p {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 119, 181, 0.4);
 }
+
+.text {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
