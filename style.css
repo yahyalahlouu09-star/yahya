@@ -19,26 +19,7 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.1);
 
 }
-/* Déplacement fluide lors du clic */
-html {
-    scroll-behavior: smooth;
-}
 
-/* Espacement pour que le contenu ne soit pas collé */
-section {
-    min-height: 100vh; /* Chaque section prend toute la hauteur de l'écran */
-    padding: 80px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-/* Couleur de fond alternée pour séparer visuellement */
-section:nth-child(even) {
-    background-color: #fdfdfd;
-}
 
 .navbar a {
     font-size: xx-large;
