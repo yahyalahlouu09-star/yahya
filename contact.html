@@ -23,37 +23,45 @@
     </header>
     <main class="contact-section">
         <div class="page-header reveal">
-            <h1 class="title">Restons en Contact</h1>
-            <p class="page-subtitle">Une question ou un projet ? Envoyez-moi un message et je vous répondrai rapidement.</p>
+            <p class="section-label">Parlons projet</p>
+            <h1 class="title">Une collaboration claire, réactive et professionnelle</h1>
+            <p class="page-subtitle">Envoyez-moi un message, et je vous répondrai rapidement avec des idées concrètes.</p>
         </div>
-        <div class="contact-container">
-            <form id="contact-form" class="contact-form reveal" novalidate>
-                <label>
-                    <span>Votre Nom</span>
+        <div class="contact-grid reveal">
+            <form id="contact-form" class="contact-card" novalidate>
+                <div class="form-group">
+                    <label>Votre Nom</label>
                     <input type="text" name="name" placeholder="Votre Nom" required>
-                </label>
-                <label>
-                    <span>Votre Email</span>
+                </div>
+                <div class="form-group">
+                    <label>Votre Email</label>
                     <input type="email" name="email" placeholder="Votre Email" required>
-                </label>
-                <label>
-                    <span>Votre Message</span>
-                    <textarea name="message" placeholder="Votre Message" rows="5" required></textarea>
-                </label>
+                </div>
+                <div class="form-group">
+                    <label>Votre Message</label>
+                    <textarea name="message" rows="5" placeholder="Votre Message" required></textarea>
+                </div>
                 <button type="submit" class="submit-btn">Envoyer</button>
             </form>
-            <div class="contact-panel reveal">
-                <div class="social-links">
-                    <a href="https://github.com" target="_blank" class="social-card github">
-                        <span>GitHub</span>
-                    </a>
-                    <a href="https://linkedin.com" target="_blank" class="social-card linkedin">
-                        <span>LinkedIn</span>
-                    </a>
+            <aside class="contact-aside">
+                <div class="contact-card contact-info">
+                    <h2>Contact direct</h2>
+                    <p>Pour un projet ou une question, je suis disponible par email et sur les réseaux.</p>
+                    <ul>
+                        <li><strong>Email :</strong> yahyalahlouu09@gmail.com</li>
+                        <li><strong>GitHub :</strong> <a href="https://github.com" target="_blank">github.com</a></li>
+                        <li><strong>LinkedIn :</strong> <a href="https://linkedin.com" target="_blank">linkedin.com</a></li>
+                    </ul>
                 </div>
-                <p class="direct-email">Ou écrivez directement : <span>yahyalahlouu09@gmail.com</span></p>
-            </div>
+                <div class="contact-card contact-note">
+                    <h3>Ce que j’apporte</h3>
+                    <p>Structure claire, design travaillé et intégration fluide pour un site prêt à être mis en production.</p>
+                </div>
+            </aside>
         </div>
     </main>
+    <footer class="site-footer reveal">
+        <p>Yahya — Toujours prêt à transformer une idée en projet web.</p>
+    </footer>
 </body>
 </html>
