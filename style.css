@@ -5,34 +5,46 @@ body {
     color: #f8fafc; /* Blanc cassé pour les yeux */
     line-height: 1.6;
 }
-
 .navbar {
-    background: rgba(30, 41, 59, 0.7); /* Effet de transparence */
-    backdrop-filter: blur(10px); /* Effet de flou derrière la barre */
-    padding: 15px 30px;
-    margin: 20px;
-    border-radius: 50px; /* Bords très arrondis */
-    top: 20px;
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%); /* Centre parfaitement l'ensemble */
+    z-index: 1000;
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-
+    gap: 15px; /* Espace entre chaque bouton */
+    padding: 10px;
 }
-
 
 .navbar a {
-    font-size: xx-large;
-    color: #94a3b8;
+    background: rgba(255, 255, 255, 0.05); /* Fond très léger */
+    backdrop-filter: blur(10px); /* Effet flou Mac */
+    color: #f8fafc;
     text-decoration: none;
-    font-weight: 500;
-    transition: 0.3s; /* Transition fluide */
+    padding: 12px 24px;
+    border-radius: 12px; /* Coins arrondis modernes */
+    font-weight: 600;
+    font-size: 1.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Animation fluide */
+    margin-top: 10rem; /* Légère marge pour éviter de coller au bord du navigateur */
+    
 }
 
+/* Effet au survol (Hover) */
 .navbar a:hover {
-    color: #38bdf8; /* Couleur bleu néon au survol */
-    text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+    background: linear-gradient(135deg, #38bdf8, #818cf8); /* Ton dégradé signature */
+    color: white;
+    border-color: transparent;
+    transform: translateY(-5px) scale(1.05); /* Petit saut vers le haut */
+    box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3);
 }
+
+/* Style pour la page active (optionnel) */
+.navbar a:active {
+    transform: scale(0.95);
+}
+
 a[href*="github.com"] {
     display: inline-block;
     padding: 12px 24px;
@@ -43,6 +55,12 @@ a[href*="github.com"] {
     font-weight: bold;
     margin-top: 20px;
     transition: transform 0.2s;
+}
+.nav-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 5px;
 }
 
 a[href*="github.com"]:hover {
