@@ -81,4 +81,145 @@ h1, p {
     max-width: 800px;
     margin: 40px auto;
     padding: 0 20px;
+
+}
+
+.skills-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    background: linear-gradient(to right, #38bdf8, #818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.skill-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 20px;
+    width: 200px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #38bdf8;
+    box-shadow: 0 15px 30px rgba(56, 189, 248, 0.2);
+}
+
+.skill-card h3 {
+    font-size: 1.1rem;
+    margin: 15px 0 5px 0;
+    color: #38bdf8;
+}
+
+.skill-card p {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    margin: 0;
+}
+
+.icon {
+    font-size: 2.5rem;
+}
+
+.contact-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.subtitle {
+    color: #94a3b8;
+    margin-bottom: 40px;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Style du Formulaire */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.contact-form input, .contact-form textarea {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    font-family: inherit;
+    outline: none;
+    transition: 0.3s;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #38bdf8;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #38bdf8, #818cf8);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(56, 189, 248, 0.4);
+}
+
+/* Style des boutons réseaux sociaux */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.social-card {
+    flex: 1;
+    padding: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.github { background: #24292e; border: 1px solid #444; }
+.linkedin { background: #0077b5; }
+
+.social-card:hover {
+    opacity: 0.9;
+    transform: translateY(-3px);
+}
+
+.direct-email span {
+    color: #38bdf8;
+    font-weight: bold;
 }

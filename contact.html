@@ -5,10 +5,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 class="text">Me Contacter</h1>
-    <p class="text">Email : yahyalahlouu09@gmail.com</p>
-    <a href="https://github.com" target="_blank" class="text">Voir mon GitHub</a>
-    <a href="https://www.linkedin.com/in/yahya-lahlou-693971269" target="_blank" class="btn-linkedin">Voir mon LinkedIn</a>
+    <section class="contact-section">
+    <h1 class="title">Restons en Contact</h1>
+    <p class="subtitle">Une question ou un projet ? Envoyez-moi un message.</p>
 
+    <div class="contact-container">
+        <!-- Formulaire de contact -->
+        <form class="contact-form">
+            <input type="text" placeholder="Votre Nom" required>
+            <input type="email" placeholder="Votre Email" required>
+            <textarea placeholder="Votre Message" rows="5" required></textarea>
+            <button type="submit" class="submit-btn">Envoyer</button>
+        </form>
+
+        <!-- Liens Sociaux -->
+        <div class="social-links">
+            <a href="https://github.com" target="_blank" class="social-card github">
+                <span>GitHub</span>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="social-card linkedin">
+                <span>LinkedIn</span>
+            </a>
+        </div>
+        
+        <p class="direct-email">Ou directement par mail : <span>yahyalahlouu09@gmail.com</span></p>
+    </div>
+</section>
 </body>
 </html>
