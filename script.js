@@ -1,12 +1,31 @@
 const body = document.body;
 
 const setActiveNav = () => {
-    const links = document.querySelectorAll('.nav-links a');
+    const links = document.querySelectorAll('.navbar a');
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
     links.forEach(link => {
         const href = link.getAttribute('href');
         link.classList.toggle('active', href === currentPage);
+    });
+};
+
+const initMobileMenu = () => {
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.querySelector('.nav-links');
+    if (!toggle || !menu) return;
+
+    toggle.addEventListener('click', () => {
+        const isOpen = menu.classList.toggle('active');
+        toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    document.addEventListener('click', (event) => {
+        const target = event.target;
+        if (!menu.contains(target) && !toggle.contains(target)) {
+            menu.classList.remove('active');
+            toggle.setAttribute('aria-expanded', 'false');
+        }
     });
 };
 
@@ -86,6 +105,7 @@ const initContactForm = () => {
 
 const initPage = () => {
     setActiveNav();
+    initMobileMenu();
     revealOnScroll();
     initHeroBlob();
     initTypewriter();
