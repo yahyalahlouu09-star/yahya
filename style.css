@@ -1,16 +1,16 @@
 /* Global variables and reset */
 :root {
     color-scheme: dark;
-    --bg: #081028;
-    --surface: rgba(14, 18, 41, 0.92);
-    --surface-soft: rgba(255, 255, 255, 0.08);
-    --surface-strong: rgba(255, 255, 255, 0.16);
-    --primary: #52c7ff;
-    --secondary: #8b5cf6;
+    --bg: #0b1530;
+    --surface: rgba(18, 25, 58, 0.92);
+    --surface-soft: rgba(255, 255, 255, 0.12);
+    --surface-strong: rgba(255, 255, 255, 0.2);
+    --primary: #7dd3fc;
+    --secondary: #c084fc;
     --accent: #fb7185;
-    --text: #f7fafc;
-    --muted: #cbd5e1;
-    --border: rgba(255, 255, 255, 0.16);
+    --text: #f8fafc;
+    --muted: #d2dce8;
+    --border: rgba(255, 255, 255, 0.18);
 }
 
 * {
@@ -25,12 +25,21 @@ body {
     margin: 0;
     min-height: 100vh;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background: radial-gradient(circle at top left, rgba(124, 58, 237, 0.14), transparent 25%),
-                radial-gradient(circle at bottom right, rgba(34, 211, 238, 0.1), transparent 20%),
-                var(--bg);
+    background: radial-gradient(circle at top left, rgba(125, 211, 252, 0.16), transparent 23%),
+                radial-gradient(circle at bottom right, rgba(192, 132, 252, 0.14), transparent 18%),
+                linear-gradient(180deg, #101c3b 0%, #0b1529 100%);
     color: var(--text);
-    line-height: 1.7;
+    line-height: 1.75;
     overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(circle at 30% 20%, rgba(125, 211, 252, 0.12), transparent 18%),
+                radial-gradient(circle at 75% 85%, rgba(192, 132, 252, 0.11), transparent 20%);
 }
 
 body.loaded .page-loader {
@@ -227,15 +236,24 @@ img {
 }
 
 .hero-panel {
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 28px;
-    padding: 34px;
-    backdrop-filter: blur(18px);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(125, 211, 252, 0.22);
+    border-radius: 32px;
+    padding: 38px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 30px 80px rgba(19, 45, 80, 0.24);
 }
 
 .hero-panel-header {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
+}
+
+.hero-panel h2 {
+    color: #edf2ff;
+}
+
+.hero-panel .panel-note {
+    color: rgba(255, 255, 255, 0.78);
 }
 
 .panel-eyebrow {
@@ -349,17 +367,49 @@ img {
     gap: 14px;
 }
 
-.service-card,
-.project-card,
-.skill-card,
+.service-card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 32px;
+    padding: 36px;
+    backdrop-filter: blur(18px);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 3rem;
+}
+.project-card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 32px;
+    padding: 36px;
+    backdrop-filter: blur(18px);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.skill-card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 32px;
+    padding: 36px;
+    backdrop-filter: blur(18px);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
 .detail-card,
-.contact-card,
+.contact-card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 32px;
+    padding: 36px;
+    backdrop-filter: blur(18px);
+      margin-bottom: 3rem;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
 .impact-card {
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.16);
     border-radius: 32px;
     padding: 36px;
     backdrop-filter: blur(18px);
+    margin-bottom: 3rem;
+    min-height: 260px;
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -394,6 +444,7 @@ img {
 }
 
 .project-card {
+    margin-bottom: 2rem;
     position: relative;
     overflow: hidden;
 }
@@ -424,19 +475,23 @@ img {
 }
 
 .skill-tabs {
+    margin-bottom: 2rem;
     grid-template-columns: repeat(3, minmax(260px, 1fr));
 }
 
 .skill-card {
+    margin-bottom: 2rem;
     display: grid;
     gap: 16px;
 }
 
 .skill-card .icon {
+    margin-bottom: 2rem;
     font-size: 2.25rem;
 }
 
 .skill-bar {
+    margin-bottom: 2rem;
     background: rgba(255, 255, 255, 0.08);
     border-radius: 999px;
     overflow: hidden;
@@ -444,6 +499,7 @@ img {
 }
 
 .skill-bar span {
+    margin-bottom: 2rem;
     display: block;
     height: 100%;
     border-radius: 999px;
@@ -451,6 +507,7 @@ img {
 }
 
 .skill-details {
+    margin-bottom: 2rem;
     grid-template-columns: repeat(2, minmax(240px, 1fr));
 }
 
@@ -475,7 +532,7 @@ img {
     padding-left: 0;
     margin: 0;
     display: grid;
-    gap: 12px;
+    gap: 10px;
 }
 
 .contact-card ul li {
