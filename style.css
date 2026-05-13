@@ -12,15 +12,36 @@ body {
     padding: 15px 30px;
     margin: 20px;
     border-radius: 50px; /* Bords très arrondis */
-    position: sticky;
     top: 20px;
     display: flex;
     justify-content: center;
     gap: 20px;
     border: 1px solid rgba(255, 255, 255, 0.1);
+
+}
+/* Déplacement fluide lors du clic */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Espacement pour que le contenu ne soit pas collé */
+section {
+    min-height: 100vh; /* Chaque section prend toute la hauteur de l'écran */
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Couleur de fond alternée pour séparer visuellement */
+section:nth-child(even) {
+    background-color: #fdfdfd;
 }
 
 .navbar a {
+    font-size: xx-large;
     color: #94a3b8;
     text-decoration: none;
     font-weight: 500;
@@ -54,4 +75,23 @@ h1, p {
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
+}
+.btn-linkedin {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #0077b5; /* Bleu officiel LinkedIn */
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-left: 10px; /* Espace par rapport au bouton GitHub */
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-linkedin:hover {
+    background-color: #005582; /* Bleu plus foncé au survol */
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 119, 181, 0.4);
 }
