@@ -1,35 +1,59 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8"><title>Contact</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Yahya</title>
+    <meta name="description" content="Contactez Yahya pour collaborer sur votre prochain projet ou poser une question.">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
-<body>
-    <section class="contact-section">
-    <h1 class="title">Restons en Contact</h1>
-    <p class="subtitle">Une question ou un projet ? Envoyez-moi un message.</p>
-
-    <div class="contact-container">
-        <!-- Formulaire de contact -->
-        <form class="contact-form">
-            <input type="text" placeholder="Votre Nom" required>
-            <input type="email" placeholder="Votre Email" required>
-            <textarea placeholder="Votre Message" rows="5" required></textarea>
-            <button type="submit" class="submit-btn">Envoyer</button>
-        </form>
-
-        <!-- Liens Sociaux -->
-        <div class="social-links">
-            <a href="https://github.com" target="_blank" class="social-card github">
-                <span>GitHub</span>
-            </a>
-            <a href="https://linkedin.com" target="_blank" class="social-card linkedin">
-                <span>LinkedIn</span>
-            </a>
+<body class="page page-contact">
+    <div class="page-loader"></div>
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="brand">Yahya<span>.</span></a>
+            <div class="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="competences.html">Compétences</a>
+                <a href="projet.html">Projets</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <main class="contact-section">
+        <div class="page-header reveal">
+            <h1 class="title">Restons en Contact</h1>
+            <p class="page-subtitle">Une question ou un projet ? Envoyez-moi un message et je vous répondrai rapidement.</p>
         </div>
-        
-        <p class="direct-email">Ou directement par mail : <span>yahyalahlouu09@gmail.com</span></p>
-    </div>
-</section>
+        <div class="contact-container">
+            <form id="contact-form" class="contact-form reveal" novalidate>
+                <label>
+                    <span>Votre Nom</span>
+                    <input type="text" name="name" placeholder="Votre Nom" required>
+                </label>
+                <label>
+                    <span>Votre Email</span>
+                    <input type="email" name="email" placeholder="Votre Email" required>
+                </label>
+                <label>
+                    <span>Votre Message</span>
+                    <textarea name="message" placeholder="Votre Message" rows="5" required></textarea>
+                </label>
+                <button type="submit" class="submit-btn">Envoyer</button>
+            </form>
+            <div class="contact-panel reveal">
+                <div class="social-links">
+                    <a href="https://github.com" target="_blank" class="social-card github">
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" class="social-card linkedin">
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+                <p class="direct-email">Ou écrivez directement : <span>yahyalahlouu09@gmail.com</span></p>
+            </div>
+        </div>
+    </main>
 </body>
 </html>

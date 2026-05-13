@@ -1,38 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Yahya | Développeur Full-Stack</title>
+    <meta name="description" content="Portfolio de Yahya, développeur full-stack spécialisé en Python, C et expériences web modernes.">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
- 
-<body>
-    <nav class="navbar">
-    <div class="nav-container">
-        <a href="competences.html">Compétences</a>
-        <a href="projets.html">Projets</a>
-        <a href="contact.html">Contact</a>
-    </div>
-</nav>
-<section class="hero-section">
-    <div class="hero-content">
-        <p class="hero-tagline">👋 Bonjour, je suis Yahya</p>
-        <h1 class="hero-title">Développeur Full-Stack & Passionné de <span class="highlight">Code</span></h1>
-        <p class="hero-description">
-            Spécialisé en <strong>Python</strong> et <strong>C</strong>, je conçois des solutions logicielles et des expériences web modernes sur Mac.
-        </p>
-        
-        <div class="hero-cta">
-            <a href="projets.html" class="btn-primary">Découvrir mes projets</a>
-            <a href="contact.html" class="btn-secondary">Me contacter</a>
-        </div>
-    </div>
-    
-    <!-- Un élément visuel décoratif (optionnel) -->
-    <div class="hero-blob"></div>
-</section>
+<body class="page page-home">
+    <div class="page-loader"></div>
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="brand">Yahya<span>.</span></a>
+            <div class="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="competences.html">Compétences</a>
+                <a href="projet.html">Projets</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
 
+    <main>
+        <section class="hero-section">
+            <div class="hero-content reveal">
+                <p class="hero-tagline" data-text="👋 Salut, je suis Yahya">👋 Salut, je suis Yahya</p>
+                <h1 class="hero-title">Développeur Full-Stack & Passionné de <span class="highlight">Code</span></h1>
+                <p class="hero-description">
+                    Spécialisé en <strong>Python</strong> et <strong>C</strong>, je conçois des solutions logicielles et des expériences web modernes et fluides.
+                </p>
+                <div class="hero-cta">
+                    <a href="projet.html" class="btn-primary">Découvrir mes projets</a>
+                    <a href="contact.html" class="btn-secondary">Me contacter</a>
+                </div>
+                <div class="hero-features">
+                    <div class="feature-card reveal">
+                        <span>💡</span>
+                        <p>Interfaces modernes</p>
+                    </div>
+                    <div class="feature-card reveal">
+                        <span>⚡</span>
+                        <p>Animations fluides</p>
+                    </div>
+                    <div class="feature-card reveal">
+                        <span>🧠</span>
+                        <p>Code propre</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-blob"></div>
+        </section>
+    </main>
 </body>
-
 </html>

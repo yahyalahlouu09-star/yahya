@@ -1,30 +1,51 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8"><title>Compétences</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compétences | Yahya</title>
+    <meta name="description" content="Compétences techniques de Yahya : développement back-end, front-end et bases de données.">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
-<body>
-    
-    <section class="skills-section">
-    <h1 class="title">Expertise Technique</h1>
-    <div class="skills-container">
-        <div class="skill-card">
-            <span class="icon">💻</span>
-            <h3>Software Dev</h3>
-            <p>C / Python</p>
+<body class="page page-skills">
+    <div class="page-loader"></div>
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="brand">Yahya<span>.</span></a>
+            <div class="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="competences.html">Compétences</a>
+                <a href="projet.html">Projets</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <main class="skills-section">
+        <div class="page-header reveal">
+            <h1 class="title">Expertise Technique</h1>
+            <p class="page-subtitle">Je renforce chaque projet avec du code fiable, des architectures simples et une interface agréable.</p>
         </div>
-        <div class="skill-card">
-            <span class="icon">🌐</span>
-            <h3>Web Stack</h3>
-            <p>HTML5 / CSS3</p>
+        <div class="skills-grid">
+            <article class="skill-card reveal">
+                <span class="icon">💻</span>
+                <h3>Software Dev</h3>
+                <p>C / Python</p>
+                <div class="skill-bar"><span style="width: 92%"></span></div>
+            </article>
+            <article class="skill-card reveal">
+                <span class="icon">🌐</span>
+                <h3>Web Stack</h3>
+                <p>HTML5 / CSS3 / JS</p>
+                <div class="skill-bar"><span style="width: 88%"></span></div>
+            </article>
+            <article class="skill-card reveal">
+                <span class="icon">🗄️</span>
+                <h3>Databases</h3>
+                <p>MySQL / SQL</p>
+                <div class="skill-bar"><span style="width: 80%"></span></div>
+            </article>
         </div>
-        <div class="skill-card">
-            <span class="icon">🗄️</span>
-            <h3>Databases</h3>
-            <p>MySQL / SQL</p>
-        </div>
-    </div>
-</section>
+    </main>
 </body>
 </html>
