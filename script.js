@@ -82,34 +82,12 @@ const createToast = (message) => {
     window.setTimeout(() => toast.remove(), 3200);
 };
 
-const initContactForm = () => {
-    const form = document.querySelector('#contact-form');
-    if (!form) return;
-
-    form.addEventListener('submit', (event) => {
-        event.preventDefault();
-        const formData = new FormData(form);
-        const name = formData.get('name')?.toString().trim();
-        const email = formData.get('email')?.toString().trim();
-        const message = formData.get('message')?.toString().trim();
-
-        if (!name || !email || !message) {
-            createToast('Merci de remplir tous les champs.');
-            return;
-        }
-
-        createToast('Votre message a bien été envoyé !');
-        form.reset();
-    });
-};
-
 const initPage = () => {
     setActiveNav();
     initMobileMenu();
     revealOnScroll();
     initHeroBlob();
     initTypewriter();
-    initContactForm();
     body.classList.add('loaded');
 };
 
