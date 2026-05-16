@@ -1,16 +1,17 @@
 /* Global variables and reset */
 :root {
     color-scheme: dark;
-    --bg: #0b1530;
-    --surface: rgba(18, 25, 58, 0.92);
-    --surface-soft: rgba(255, 255, 255, 0.12);
-    --surface-strong: rgba(255, 255, 255, 0.2);
-    --primary: #7dd3fc;
-    --secondary: #c084fc;
-    --accent: #fb7185;
-    --text: #f8fafc;
-    --muted: #d2dce8;
-    --border: rgba(255, 255, 255, 0.18);
+    --bg: #040811;
+    --surface: rgba(22, 29, 62, 0.9);
+    --surface-soft: rgba(30, 37, 83, 0.55);
+    --surface-strong: rgba(52, 75, 157, 0.24);
+    --primary: #69f2ff;
+    --secondary: #8a5cff;
+    --accent: #ff5fdd;
+    --text: #f7fbff;
+    --muted: #a7bbdd;
+    --border: rgba(105, 242, 255, 0.2);
+    --shadow: 0 30px 80px rgba(32, 48, 96, 0.28);
 }
 
 * {
@@ -25,9 +26,9 @@ body {
     margin: 0;
     min-height: 100vh;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background: radial-gradient(circle at top left, rgba(125, 211, 252, 0.16), transparent 23%),
-                radial-gradient(circle at bottom right, rgba(192, 132, 252, 0.14), transparent 18%),
-                linear-gradient(180deg, #101c3b 0%, #0b1529 100%);
+    background: radial-gradient(circle at top left, rgba(105, 242, 255, 0.12), transparent 20%),
+                radial-gradient(circle at 20% 80%, rgba(138, 92, 255, 0.12), transparent 18%),
+                linear-gradient(180deg, #05091a 0%, #03050f 100%);
     color: var(--text);
     line-height: 1.75;
     overflow-x: hidden;
@@ -38,8 +39,9 @@ body::before {
     position: fixed;
     inset: 0;
     pointer-events: none;
-    background: radial-gradient(circle at 30% 20%, rgba(125, 211, 252, 0.12), transparent 18%),
-                radial-gradient(circle at 75% 85%, rgba(192, 132, 252, 0.11), transparent 20%);
+    background: radial-gradient(circle at 20% 15%, rgba(105, 242, 255, 0.18), transparent 14%),
+                radial-gradient(circle at 80% 75%, rgba(138, 92, 255, 0.16), transparent 16%),
+                repeating-linear-gradient(180deg, transparent, transparent 60px, rgba(255,255,255,0.03) 61px, rgba(255,255,255,0.03) 62px);
 }
 
 body.loaded .page-loader {
@@ -135,9 +137,10 @@ img {
 
 .nav-links a:hover,
 .nav-links a.active {
-    background: rgba(124, 58, 237, 0.16);
+    background: rgba(105, 242, 255, 0.16);
     color: var(--text);
     transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(105, 242, 255, 0.18);
 }
 
 /* Page loader */
@@ -145,7 +148,7 @@ img {
     position: fixed;
     inset: 0;
     z-index: 2000;
-    background: radial-gradient(circle at top, rgba(124, 58, 237, 0.2), transparent 35%), var(--bg);
+    background: radial-gradient(circle at top, rgba(105, 242, 255, 0.18), transparent 35%), var(--bg);
     transition: opacity 0.8s ease;
 }
 
@@ -166,14 +169,23 @@ img {
     position: absolute;
     bottom: -10%;
     right: -5%;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle at 30% 40%, rgba(125, 211, 252, 0.25), transparent 50%);
-    filter: blur(60px);
-    opacity: 0.8;
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle at 30% 40%, rgba(105, 242, 255, 0.3), transparent 48%),
+                radial-gradient(circle at 70% 30%, rgba(255, 95, 221, 0.2), transparent 38%);
+    filter: blur(80px);
+    opacity: 0.9;
     border-radius: 50%;
     pointer-events: none;
     z-index: 1;
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05), transparent 25%);
+    pointer-events: none;
 }
 
 /* Toast notifications */
@@ -265,21 +277,23 @@ img {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    color: var(--text);
+    background: linear-gradient(135deg, rgba(105, 242, 255, 0.95), rgba(138, 92, 255, 0.95));
+    color: var(--bg);
     border: none;
+    box-shadow: 0 22px 50px rgba(105, 242, 255, 0.24);
 }
 
 .btn-secondary {
-    background: rgba(255, 255, 255, 0.05);
+    background: linear-gradient(180deg, rgba(15, 25, 60, 0.9), rgba(35, 45, 88, 0.9));
     color: var(--text);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(105, 242, 255, 0.18);
+    box-shadow: inset 0 0 0 1px rgba(105, 242, 255, 0.08);
 }
 
 .btn-primary:hover,
 .btn-secondary:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 45px rgba(124, 58, 237, 0.18);
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 24px 70px rgba(105, 242, 255, 0.2);
 }
 
 .hero-badges {
@@ -298,12 +312,28 @@ img {
 }
 
 .hero-panel {
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(125, 211, 252, 0.22);
-    border-radius: 32px;
-    padding: 38px;
-    backdrop-filter: blur(20px);
-    box-shadow: 0 30px 80px rgba(19, 45, 80, 0.24);
+    background: rgba(12, 20, 48, 0.75);
+    border: 1px solid rgba(105, 242, 255, 0.16);
+    border-radius: 38px;
+    padding: 42px;
+    backdrop-filter: blur(24px);
+    box-shadow: 0 40px 120px rgba(15, 28, 58, 0.35);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-panel::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(105, 242, 255, 0.12), transparent 28%),
+                radial-gradient(circle at bottom left, rgba(255, 95, 221, 0.08), transparent 30%);
+    pointer-events: none;
+}
+
+.hero-panel h2 {
+    position: relative;
+    z-index: 1;
 }
 
 .hero-panel-header {
@@ -439,50 +469,46 @@ img {
     gap: 14px;
 }
 
-.service-card {
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.16);
-    border-radius: 32px;
-    padding: 36px;
-    backdrop-filter: blur(18px);
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-    margin-bottom: 3rem;
-}
-.project-card {
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.16);
-    border-radius: 32px;
-    padding: 36px;
-    backdrop-filter: blur(18px);
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
-.skill-card {
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.16);
-    border-radius: 32px;
-    padding: 36px;
-    backdrop-filter: blur(18px);
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
+.service-card,
+.project-card,
+.skill-card,
 .detail-card,
-.contact-card {
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.16);
-    border-radius: 32px;
-    padding: 36px;
-    backdrop-filter: blur(18px);
-      margin-bottom: 3rem;
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
+.contact-card,
 .impact-card {
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.16);
+    background: rgba(10, 14, 34, 0.82);
+    border: 1px solid rgba(105, 242, 255, 0.14);
     border-radius: 32px;
     padding: 36px;
-    backdrop-filter: blur(18px);
-    margin-bottom: 3rem;
-    min-height: 260px;
+    backdrop-filter: blur(22px);
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 3rem;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02), 0 28px 60px rgba(0,0,0,0.18);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before,
+.project-card::before,
+.skill-card::before,
+.detail-card::before,
+.contact-card::before,
+.impact-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(138, 92, 255, 0.14), transparent 25%);
+    pointer-events: none;
+}
+
+.service-card:hover,
+.project-card:hover,
+.skill-card:hover,
+.detail-card:hover,
+.contact-card:hover,
+.impact-card:hover {
+    transform: translateY(-10px) scale(1.01);
+    border-color: rgba(105, 242, 255, 0.4);
+    box-shadow: 0 36px 90px rgba(105, 242, 255, 0.18);
 }
 
 .service-card:hover,
@@ -635,13 +661,13 @@ img {
 .contact-form textarea,
 #contact-form input,
 #contact-form textarea {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 16px;
-    padding: 16px 18px;
+    background: rgba(10, 14, 34, 0.86);
+    border: 1px solid rgba(105, 242, 255, 0.18);
+    border-radius: 20px;
+    padding: 18px 20px;
     color: var(--text);
     outline: none;
-    transition: border-color 0.25s ease, background 0.25s ease;
+    transition: border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
 }
 
 .contact-form input:focus,
@@ -649,24 +675,30 @@ img {
 #contact-form input:focus,
 #contact-form textarea:focus {
     border-color: var(--primary);
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(16, 21, 52, 0.92);
+    box-shadow: 0 0 0 4px rgba(105, 242, 255, 0.08);
 }
 
 .submit-btn {
     width: fit-content;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    color: var(--text);
+    background: linear-gradient(135deg, rgba(105, 242, 255, 0.95), rgba(138, 92, 255, 0.95));
+    color: var(--bg);
     border: none;
-    padding: 15px 28px;
-    border-radius: 16px;
-    font-weight: 700;
+    padding: 16px 34px;
+    border-radius: 22px;
+    font-weight: 800;
     cursor: pointer;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .submit-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 18px 32px rgba(124, 58, 237, 0.18);
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 20px 42px rgba(105, 242, 255, 0.22);
+}
+
+.submit-btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 26px rgba(105, 242, 255, 0.18);
 }
 
 .impact-element,
