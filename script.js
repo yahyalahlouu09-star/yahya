@@ -82,12 +82,55 @@ const createToast = (message) => {
     window.setTimeout(() => toast.remove(), 3200);
 };
 
+const initContactForm = () => {
+    const form = document.querySelector('#contact-form');
+    if (!form) return;
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const formData = new FormData(form);
+        const name = formData.get('name')?.toString().trim();
+        const email = formData.get('email')?.toString().trim();
+        const message = formData.get('message')?.toString().trim();
+
+        if (!name || !email || !message) {
+            createToast('Merci de remplir tous les champs.');
+            return;
+        }
+
+        const subject = 'Nouveau message depuis votre portfolio';
+        const body = `Nom: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+        const mailto = `mailto:yahyalahlouu09@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+        createToast('Ouverture du client mail...');
+        window.location.href = mailto;
+    });
+};
+
+const getQueryParam = (name) => {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+};
+
+const displaySuccessMessage = () => {
+    const success = getQueryParam('success');
+    if (success === 'true') {
+        const successElement = document.querySelector('#form-success');
+        if (successElement) {
+            successElement.hidden = false;
+        }
+        createToast('Message envoyé ! Merci, je vous contacte bientôt.');
+    }
+};
+
 const initPage = () => {
     setActiveNav();
     initMobileMenu();
     revealOnScroll();
     initHeroBlob();
     initTypewriter();
+    initContactForm();
+    displaySuccessMessage();
     body.classList.add('loaded');
 };
 
