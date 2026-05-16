@@ -195,10 +195,6 @@ img {
     filter: drop-shadow(0 30px 40px rgba(20,20,20,0.12));
     transform-style: preserve-3d;
 }
-.hero-blob .sphere.s1 { width: 260px; height: 260px; left: 18%; top: 6%; background: radial-gradient(circle at 35% 30%, #fffaf6, #e9ddcd 60%);} 
-.hero-blob .sphere.s2 { width: 180px; height: 180px; left: 52%; top: 24%; background: radial-gradient(circle at 30% 30%, #fffdf9, #d9cbb5 60%);} 
-.hero-blob .sphere.s3 { width: 120px; height: 120px; left: 68%; top: 58%; background: radial-gradient(circle at 40% 30%, #fffdf9, #e0d3bf 60%);} 
-.hero-blob .sphere.s4 { width: 340px; height: 160px; left: -6%; top: 48%; background: radial-gradient(circle at 20% 40%, #fffaf6, #e6dbca 60%); transform: rotate(-12deg);}
 
 .hero-figures {
     position: absolute;
